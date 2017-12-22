@@ -276,7 +276,7 @@
                             <div class="panel-heading"> <jsp:getProperty name="product" property="proname" /> </div>
                             <div class="panel-body"><img src="<jsp:getProperty name="product" property="proimg" />" class="img-responsive" style="width:100%" alt="Image"></div>
                             <div class="panel-footer">$<jsp:getProperty name="product" property="proprice" /> 
-                                <form method="post" action="Cart">
+                                <form method="post" action="cart">
                                     <button type="submit" name="addtocart" value=<jsp:getProperty name="product" property="proid" /> >Add to cart</button> 
                                 </form>
                             </div>

@@ -6,7 +6,7 @@ package function;
  * and open the template in the editor.
  */
 
-import function.ProductDTO;
+import DTO.ProductDTO;
 import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 

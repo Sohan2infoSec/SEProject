@@ -5,6 +5,8 @@ package function;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import Database.ProductDAO;
+import DTO.ProductDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;

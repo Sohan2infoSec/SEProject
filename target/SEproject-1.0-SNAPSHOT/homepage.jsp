@@ -59,8 +59,30 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" onclick="document.getElementById('login').style.display = 'block'" style="width:auto;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-         <li><a href="#" onclick="document.getElementById('signup').style.display = 'block'" style="width:auto;"></span> Logout</a></li>
+          <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="manageUser.jsp" name="action" value="ManageUser">Member</a>
+                        </li>
+        <%
+                            if (session.getAttribute("admin") == null && session.getAttribute("user") == null) {
+                        %>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="loginPage.jsp">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="loginPage.jsp">Login</a>
+                        </li>
+                        <%
+                        } else {
+                        %>
+
+                        <li class="nav-item">
+                            <form role="form" action="logout" method="post" class="nav-link js-scroll-trigger">
+                                <input type="submit" value="Logout" class="logoutButton">
+                            </form>
+                        </li>
+                        <%
+                            }
+                        %>
       </ul>
     </div>
   </div>
@@ -69,7 +91,7 @@
     <!--login-->
       <div id="signup" class="addedform">
             <span onclick="document.getElementById('signup').style.display = 'none'" class="close" title="Close Sign Up">×</span>
-            <form class="form-content" id="signupjs" action="hihi.jsp"  >
+            <form class="form-content" id="signupjs" action="loginPage.jsp"  >
                 <div class="formContainer">
                     <h1>Sign Up</h1>
                     <hr>
